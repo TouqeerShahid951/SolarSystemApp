@@ -198,7 +198,7 @@ class AstroCard extends StatelessWidget {
               width: 60,
               height: 60,
               fit: BoxFit.contain,
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withAlpha(51),  // Changed from withOpacity(0.2)
               colorBlendMode: BlendMode.modulate,
             ),
           ),
