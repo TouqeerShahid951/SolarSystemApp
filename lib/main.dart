@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'planet_detail_screen.dart';
 
 void main() {
   runApp(const AstroExplorerApp());
@@ -244,7 +245,19 @@ class AstroCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PlanetDetailScreen(
+                            title: title,
+                            description: description,
+                            imagePath: imagePath,
+                            color: color,
+                          ),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: color,
                       shape: RoundedRectangleBorder(
